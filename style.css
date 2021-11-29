@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 500px;
+  width: 350px;
+  background-color: rgba(63, 5, 163, 0.918);
+}
+
+.head {
+  background-color: rgb(69, 71, 70);
+  height: 90px;
+  width: 150px;
+  border-radius: 30px;
+}
+
+.cat {
+  position: relative;
+  top: 150px;
+  left: 50px
+}
+
+.ear-left, .ear-right {
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid rgb(69, 71, 70);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: relative;
+
+}
+
+.ear-left {
+  bottom: 35px;
+  transform: rotate(-30deg);
+}
+
+.ear-right {
+  bottom: 85px;
+  left: 110px;
+  transform: rotate(30deg);
+}
+
+.inside-left {
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid rgb(204, 141, 24);
+  border-left: 25px solid transparent;
+  right: 25px;
+  position: relative;
+}
+
+.inside-right {
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid rgba(204, 132, 24, 0.918);
+  border-right: 25px solid transparent;
+  position: relative;
+}
+
+.eye-left, .eye-right {
+  background-color: rgb(211, 128, 50);
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye-right {
+   bottom: 110px;
+   left: 80px;
+}
+
+.eye-left{
+  bottom: 80px;
+  left: 40px;
+}
+
+.puppil {
+  background-color: black;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  position: relative;
+  top: 8px;
+}
+
+.mouth {
+  width: 0;
+  height: 0;
+  border-top: 8px solid black;
+  border-left: 17px solid transparent;
+  transform: rotate(98deg);
+  position: relative;
+  left: 65px;
+  bottom: 110px;
+}
+
+.w {
+  width: 67px;
+  height: 1px;
+  background-color: black;
+  position: relative;
+}
+
+.cat-body {
+  background-color: rgb(69, 71, 70);
+  height: 120px;
+  width: 130px;
+  position: relative;
+  left: 30px;
+  bottom: 5px;
+  border-radius: 0px 65px 0 0;
+}
+
+.leg-left, .leg-right {
+  position: relative;
+  background-color: rgb(69, 71, 70);
+  height: 10px;
+  width: 22px;
+  border-radius: 0 0 10px 10px;
+}
+
+.leg-left {
+  top: 120px;
+}
+
+.leg-right {
+  top: 110px;
+  left: 50px;
+}
+
+.tail {
+  background-color: rgb(69, 71, 70);
+  width: 100px;
+  height: 20px;
+  position: relative;
+  top: 80px;
+  left: 100px;
+  border-radius: 20px;
+  animation: moveTail .3s ease-in .0s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: 0% 50%;
+}
+
+.tail:hover {
+  cursor: pointer;
+}
+
+.w1 {
+  bottom: 112px;
+  left: 98px;
+
+  animation: moveWhisker1 2s ease-in-out infinite alternate;
+  transform: rotate(-21deg);
+  transform-origin: top left;
+}
+
+.w2 {
+  bottom: 112px;
+  left: 98px;
+
+  animation: moveWhisker2 2s ease-in-out infinite alternate;
+  transform: rotate(6deg);
+  transform-origin: top left;
+}
+
+.w3 {
+  bottom: 111px;
+  left: -10px;
+
+  animation: moveWhisker3 2s ease-in-out infinite alternate;
+  transform: rotate(-6deg);
+  transform-origin: bottom right;
+}
+
+.w4 {
+  bottom: 112px;
+  left: -10px;
+
+  transform: rotate(21deg);
+  animation: moveWhisker4 2s ease-in-out infinite alternate;
+  transform-origin: top right;
+}
+
+@keyframes moveWhisker1{
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveWhisker2 {
+  0% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes moveWhisker3 {
+  0% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes moveWhisker4 {
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveTail {
+  0% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+
+  100% {
+   opacity: 1;
+   transform: translate(0);
+  }
+}
